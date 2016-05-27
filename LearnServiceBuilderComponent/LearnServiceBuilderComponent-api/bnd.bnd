@@ -1,0 +1,7 @@
+Bundle-SymbolicName: learnservicebuildercomponent-api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.learn.liferay.exception,\
+	com.learn.liferay.model,\
+	com.learn.liferay.service,\
+	com.learn.liferay.service.persistence
