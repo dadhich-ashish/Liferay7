@@ -1,8 +1,12 @@
 package com.learning.liferay;
 
 import com.liferay.portal.kernel.service.UserLocalServiceWrapper;
+import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.model.User;
+import com.liferay.portal.kernel.service.ServiceContext;
 import com.liferay.portal.kernel.service.ServiceWrapper;
+
+import java.util.Locale;
 
 import org.osgi.service.component.annotations.Component;
 
@@ -17,10 +21,10 @@ public class LearnServiceWrapperComponentservicewrapper extends UserLocalService
 	public LearnServiceWrapperComponentservicewrapper() {
 		super(null);
 	}
+	
 	@Override
-	public User addUser(User user) {
-
-		System.out.println("Created Service Wrapper");
-		return super.addUser(user);
+	public User getUser(long userId) throws PortalException {
+		System.out.println("Service Wrapper Get User Called");
+		return super.getUser(userId);
 	}
 }
